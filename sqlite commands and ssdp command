@@ -1,0 +1,4 @@
+sqlite3 /var/db/lutron-db.sqlite 'insert into zone values (4180)'
+sqlite3 /var/db/lutron-db.sqlite 'insert into serviceassociation values (1,2,15,4180)'
+sqlite3 /var/db/lutron-db.sqlite 'insert into homekitserviceassociation values (1,2)'
+ tail -f /var/log/messages | grep  -v -e  "ssdp: " -e "speakercache: "
